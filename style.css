@@ -21,6 +21,10 @@ body {
     width: 100%;
 }
 
+#nav a {
+    text-decoration: none;
+}
+
 .nav-inner {
     display: flex;
     justify-content: space-between;
@@ -39,6 +43,26 @@ body {
     cursor: pointer;
     border-radius: 3px;
     font-weight: 500;
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px; /* controls how deep the curve dips */
+  width: 140%;
+  height: 90px; /* thickness of the curve area */
+  border-top: 4px solid #e50914; /* Netflix red line */
+  border-radius: 50%;
+  opacity: 0.9;
+  pointer-events: none;
+  background-image: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), none;
 }
 
 .hero {
@@ -93,12 +117,15 @@ body {
     background: rgba(0, 0, 0, 0.4);
     outline: none;
     color: white;
-    font-weight: 400;
+    font-weight: 600;
+    cursor: pointer;
+    outline: 1px solid grey;
 }
 
 .email-form input:focus {
     border-color: white;
     box-shadow: 0 0 0 2px white;
+    box-sizing: border-box;
 }
 
 #hero-button {
@@ -110,6 +137,7 @@ body {
     font-weight: 600;
     font-size: 18px;
     border-radius: 3px;
+    line-height: 24px;
 }   
 
 /* Trending Now Section */
