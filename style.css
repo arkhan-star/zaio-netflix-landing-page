@@ -133,7 +133,7 @@ body {
     margin-top: -90px; /* overlaps hero, makes background look like it stops */
     padding: 80px 0 40px;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #trending-now::before {
@@ -228,7 +228,7 @@ body {
 /* More Reasons to Join Section */
 
 #more-reasons {
-    padding: 60px 0;
+    padding: 10px 0;
     color: white;
     margin-bottom: 64px;
 }
