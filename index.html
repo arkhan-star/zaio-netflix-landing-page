@@ -9,6 +9,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const row = document.getElementById("trending-row");
+        const leftBtn = document.querySelector(".scroll-btn.left");
+        const rightBtn = document.querySelector(".scroll-btn.right");
+
+        if (!row || !leftBtn || !rightBtn) return;
+
+        function getScrollAmount() {
+            return Math.max(300, row.clientWidth - 120);
+        }
+
+        rightBtn.addEventListener("click", () => {
+            row.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+        });
+
+        leftBtn.addEventListener("click", () => {
+            row.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+        });
+
+        row.addEventListener("wheel", (e) => {
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+            e.preventDefault();
+            row.scrollLeft += e.deltaY;
+        }, { passive: false });
+        });
+    </script>
 <body>
     <header class="header">
         <nav id="nav">
@@ -35,50 +62,53 @@
             <div class="trending-header">
                 <h2>Trending Now</h2>
             </div>
-
-            <div class="trending-row">
-                <div class="trending-card">
-                    <img src="./assets/trending-1.png" alt="Trending Now 1" class="trending-image">
-                    <span class="position">1</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-2.png" alt="Trending Now 2" class="trending-image">
-                    <span class="position">2</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-3.png" alt="Trending Now 3" class="trending-image">
-                    <span class="position">3</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-4.png" alt="Trending Now 4" class="trending-image">
-                    <span class="position">4</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-5.png" alt="Trending Now 5" class="trending-image">
-                    <span class="position">5</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-6.png" alt="Trending Now 6" class="trending-image">
-                    <span class="position">6</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-7.png" alt="Trending Now 7" class="trending-image">
-                    <span class="position">7</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-8.png" alt="Trending Now 8" class="trending-image">
-                    <span class="position">8</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-9.png" alt="Trending Now 9" class="trending-image">
-                    <span class="position">9</span>
-                </div>
-                <div class="trending-card">
-                    <img src="./assets/trending-10.png" alt="Trending Now 10" class="trending-image">
-                    <span class="position">10</span>
-                </div>
+                <div class="trending-wrapper">
+                    <button class="scroll-btn left" type="button" aria-label="Scroll left">‹</button>
+                    <div class="trending-row" id="trending-row">
+                        <div class="trending-card">
+                            <img src="./assets/trending-1.png" alt="Trending Now 1" class="trending-image">
+                            <span class="position">1</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-2.png" alt="Trending Now 2" class="trending-image">
+                            <span class="position">2</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-3.png" alt="Trending Now 3" class="trending-image">
+                            <span class="position">3</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-4.png" alt="Trending Now 4" class="trending-image">
+                            <span class="position">4</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-5.png" alt="Trending Now 5" class="trending-image">
+                            <span class="position">5</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-6.png" alt="Trending Now 6" class="trending-image">
+                            <span class="position">6</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-7.png" alt="Trending Now 7" class="trending-image">
+                            <span class="position">7</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-8.png" alt="Trending Now 8" class="trending-image">
+                            <span class="position">8</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-9.png" alt="Trending Now 9" class="trending-image">
+                            <span class="position">9</span>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./assets/trending-10.png" alt="Trending Now 10" class="trending-image">
+                            <span class="position">10</span>
+                        </div>
+                    </div>
+                <button class="scroll-btn right" type="button" aria-label="Scroll right">›</button> 
             </div>
-        </div>   
+        </div>  
     </section>
     <section id="more-reasons">
         <div class="more-reasons-inner">
