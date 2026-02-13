@@ -172,7 +172,7 @@ body {
     z-index: 1; /* ensures content is above the gradient background */
 }
 
-.trending-header h3 {
+.trending-header h2 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -286,13 +286,58 @@ body {
     bottom: 18px;
     right: 18px;
 }
-/* #reason {
+
+/* Frequently Asked Questions Section */
+
+#faq {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.faq-innter {
+    padding: 0 32px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.faq-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+#faq details {
+    background-color: rgb(45, 45, 45);
+    margin-bottom: 10px;
+    padding: 24px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#faq summary {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    padding: 20px 5%;
-} */
+    font-size: 24px;
+    font-weight: 400;
+    align-items: center;
+}
 
-/* .reason-item {
-    
-} */
+#faq summary::after {
+    content: "+";
+    font-size: 24px;
+    font-weight: 300;
+    transition: transform 0.3s smooth;
+}
+
+#faq details[open] summary::after { /* Rotate + when open */
+    content: "×";
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 1.6;
+}
