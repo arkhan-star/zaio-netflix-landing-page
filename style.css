@@ -227,19 +227,65 @@ body {
 
 /* More Reasons to Join Section */
 
+#more-reasons {
+    padding: 60px 0;
+    color: white;
+    margin-bottom: 64px;
+}
+
 .more-reasons-inner {
-    max-width: 1250px; /* centers content and limits width */
+    max-width: 1250px;
     margin: 0 auto;
     padding: 0 32px;
+}
+
+#more-reasons .more-reasons-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 24px;
+    padding: 0;
+    max-width: none;
+}
+
+.more-reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0;
+    max-width: none;
+}
+
+.more-reasons-tile {
+    background: linear-gradient(149deg, rgb(25, 34, 71) 0%, rgb(33, 14, 23) 96.86%);
+    padding: 28px 26px;
+    border-radius: 16px;
+    height: 324px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: flex-start;
     position: relative;
 }
 
-.more-reasons-header h3 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 24px;
+.more-reasons-tile h3 {
+    font-size: 24px;
+    font-weight: 600;
 }
 
+.more-reasons-tile p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.icon {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+}
 /* #reason {
     display: flex;
     justify-content: space-between;
