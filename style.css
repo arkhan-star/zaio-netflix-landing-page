@@ -189,7 +189,6 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     align-items: center;
-    scroll-snap-type: x mandatory;
     padding: 10px 48px; /* Adds padding to the left and right of the row */
     position: relative;
     -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS devices */
@@ -251,8 +250,6 @@ body {
     position: relative;
     border-radius: 10px;
     transition: transform 0.3s ease; /* Smooth zoom on hover */;
-    scroll-snap-align: start; /* Ensures each card adjusts to the start of the scroll container */
-    scroll-margin-left: 48px; /* Adds margin to the left of the first card for better alignment when scrolled into view */
     transform-origin: center;
     will-change: transform; /* Optimizes for smoother hover animations */
 }
