@@ -221,34 +221,33 @@ body {
 .scroll-btn.right { right: 8px; }
 
 .scroll-btn:hover{
-  background: grey
+    background: grey
 }
 
-.trending-wrapper::before,
-.trending-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 60px;
-  height: 100%;
-  pointer-events: none;
-  z-index: 6;
+.trending-wrapper::before, .trending-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 6;
 }
 
 .trending-wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, #000, rgba(0,0,0,0));
+    left: 0;
+    background: linear-gradient(to right, #000, rgba(0,0,0,0));
 }
 
 .trending-wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, #000, rgba(0,0,0,0));
+    right: 0;
+    background: linear-gradient(to left, #000, rgba(0,0,0,0));
 }
 
 .trending-card {
     flex: 0 0 auto; /* Prevents cards from shrinking and allows horizontal scrolling */
     position: relative;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: transform 0.3s ease; /* Smooth zoom on hover */;
     transform-origin: center;
     will-change: transform; /* Optimizes for smoother hover animations */
@@ -399,3 +398,116 @@ body {
     font-size: 24px;
     line-height: 1.6;
 }
+
+/* Footer Section */
+
+footer {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-bottom: 80px 0 60px;
+}
+
+.email-form-footer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 16px;
+
+}
+
+#email-form-footer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 16px;
+    padding-bottom: 64px;
+}
+
+#email-form-footer input {
+    padding: 0 16px;
+    font-size: 16px;
+    width: 561px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.4);
+    outline: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    outline: 1px solid grey;
+}
+
+#email-form-footer input:focus {
+    border-color: white;
+    box-shadow: 0 0 0 2px white;
+    box-sizing: border-box;
+}
+
+#email-footer-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 24px;
+    border-radius: 3px;
+    line-height: 24px;
+    width: 213px;
+}
+
+footer h3 {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px 24px;
+    margin-bottom: 28px;
+}
+
+#footer-links ul {
+    list-style: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#footer-links ul a {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 4px 0;
+}
+
+#footer-links ul li {
+    margin-bottom: 10px;
+}
+
+#contact {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+#closer {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
