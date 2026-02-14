@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 1px solid rgba(255,0,0,0.25);
 }
 
 body {
@@ -348,7 +349,7 @@ body {
     margin: 0 auto;
 }
 
-.faq-innter {
+.faq-inner {
     padding: 0 32px;
     margin: 0 auto;
     padding: 0 32px;
@@ -405,7 +406,7 @@ body {
 footer {
     max-width: 1250px;
     margin: 0 auto;
-    padding-bottom: 80px 0 60px;
+    padding: 80px 0 60px;
 }
 
 .email-form-footer {
@@ -519,8 +520,27 @@ footer p {
         padding: 16px;
     }
 
+    .email-form {
+        flex-direction: column;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .email-form input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #hero-button,#email-footer-button {
+        width: 100%;
+    }
+
     .hero h1 {
         font-size: 32px;
+    }
+
+    .hero h3 {
+        text-align: center;
     }
 
     .hero p {
@@ -557,6 +577,38 @@ footer p {
 
     .more-reasons-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 12px;
+    }
+
+    .more-reasons-tile {
+        padding: 16px;
+        min-height: 200px;
+        height: auto;
+        gap: 12px;
+    }
+
+    .more-reasons-tile h3 {
+        font-size: 16px;
+    }
+
+    .more-reasons-tile p {
+        font-size: 12px;
+    }
+
+    .icon img {
+        width: 25px;
+        height: auto;
+    }
+
+    #email-form-footer {
+        flex-direction: column;
+        align-items: stretch;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #email-form-footer input {
+        width: 100%;
+        max-width: 100%;
     }
 }
