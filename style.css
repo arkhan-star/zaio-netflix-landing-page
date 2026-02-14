@@ -511,3 +511,51 @@ footer p {
     margin-bottom: 40px;
 }
 
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+    .nav-inner {
+        padding: 16px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #trending-now::before, #trending-now::after {
+        width: 200%;
+        height: 100px;
+    }
+
+    .trending-header h2 {
+        font-size: 24px;
+    }
+
+    .trending-row {
+        gap: 20px;
+        padding: 10px 16px;
+    }
+
+    .trending-card {
+        width: 120px;
+        height: 180px;
+    }
+
+    .position {
+        font-size: 80px;
+        left: -10px;
+    }
+
+    #more-reasons .more-reasons-title {
+        font-size: 24px;
+    }
+
+    .more-reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
