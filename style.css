@@ -512,6 +512,43 @@ footer p {
     margin-bottom: 40px;
 }
 
+/* Media Player Section */
+
+#media-player {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+#media-player > div { /* Container for the TV and video to allow for proper layering and positioning */
+    position: relative;
+    width: 560px; /* Adjust this value to scale the TV and video together */
+    max-width: 90vh; /* Limits the size of the TV and video */
+}
+
+#tv-wrapper {
+    position: relative;
+    width: 560px; /* Adjust this value to scale the TV and video together */    
+    max-width: 90%; /* Limits the size of the TV and video */
+}
+
+.media-player-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#netflix-video {
+    position: absolute;
+    top: 1%; /* tweak these 4 values until perfect */
+    left: 1%; /* tweak these 4 values until perfect */
+    width: 98%; /* tweak these 4 values until perfect */
+    height: 87%; /* tweak these 4 values until perfect */
+    object-fit: cover;
+}
+
 /* Mobile Responsive Design */
 
 @media (max-width: 768px) {
